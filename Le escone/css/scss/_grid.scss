@@ -1,0 +1,126 @@
+// Variáveis do Gird
+$colunas: 12;
+$gutter: 20px;
+$modelo-desktop: 1200px;
+$modelo-tablet: 760px;
+$modelo-mobile: 480px;
+
+// Box-sizing
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// Mixin de media-query
+@mixin  responsivo($modelo: false) {
+    @if ($modelo == tablet)
+    {
+        @media screen and (min-width: $modelo-tablet) and (max-width: $modelo-desktop - 1) {
+            @content;
+        }
+    }
+    @else
+    {
+        @media screen and (max-width: $modelo-tablet - 1) {
+            @content;
+        }
+    }
+}
+
+// Mixin container
+@mixin container() {
+    max-width: $modelo-desktop;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include responsivo(tablet) {
+        max-width: $modelo-tablet;
+    }
+
+    @include responsivo() {
+        max-width: $modelo-mobile;
+        padding: 0 10px;
+    }
+}
+
+.container {
+    @include container;
+}
+
+.row {
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+    position: relative;
+
+    @include responsivo() {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+// Função do grid
+@function grid($coluna, $Offset: false)
+{
+    $largura: $coluna / $colunas * 100 + "%";
+    $valorFinal: calc(#{$largura} - #{$gutter});
+
+    @if ($Offset == offset)
+    {
+        $gutter: $gutter / 2;
+        $valorFinal: calc(#{$largura} + #{$gutter});
+    }
+
+    @return $valorFinal;
+}
+
+// Gerar classes de grid
+@for $i from 1 through $colunas
+{
+    .grid-#{$i} {
+        width: grid($i);       
+    }
+}
+
+// Mixin estrutura do grid
+@mixin estrutura-grid {
+    min-height: 1px;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+
+    @include responsivo() {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0; 
+    }
+}
+
+// class: atributo html, ^=: seleciona todos objetos que comecem com determinado conjunto de caractere, "grid-": conjunto de caractere
+[class^="grid-"] {
+    @include estrutura-grid();
+}
+
+// Gera as classes de offset
+@for $i from 1 through $colunas
+{
+    .offset-#{$i} {
+        margin-left: grid($i);
+        @extend %offset;
+    }
+}
+
+@include responsivo() {
+    %offset {
+        margin-left: 0px;
+    }
+}
+
+div {
+    min-height: 50px!important;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
