@@ -1,0 +1,18 @@
+//Importa o arquivo e cria um arquivo .css na pasta de saída
+//@import "cores";
+
+//Usando _ antes do arquivo ele importa o arquivo sem criar um outro arquivo .css na pasta de saída
+@import "_cores";
+
+div{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: $cinza;
+
+    p{
+        color: $vermelho;
+        font-size: 24pt;
+    }
+}

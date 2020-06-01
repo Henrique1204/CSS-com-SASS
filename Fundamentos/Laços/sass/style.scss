@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #999;
+}
+
+$colunas: 12;
+$gutter: 30px;
+
+@for $i from 1 through $colunas
+{
+    $largura: round( ($i / $colunas * 100) + 0% );
+
+    .grid-#{$i} {
+        width:  calc(#{$largura} - #{$gutter});
+        height: 75px;
+        margin: $gutter / 2;
+        color: #fff;
+        background-color: #111;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
+//while
+
+//$i: 1;
+
+//@while $i <= 12
+//{
+//    .grid-#{$i} {
+//        font-size: 16 * $i + 0px;
+//    }
+
+//    $i: $i + 1;
+//}
+
+//each
+
+//$lista: normal bold 700 900;
+
+//@each $item in $lista
+//{
+//    .grid-1 {
+//        font-weight: $item;
+//    }
+//}

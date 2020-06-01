@@ -1,0 +1,25 @@
+$roxo: #84E;
+
+@function em($pixel, $padrao_navegador: 16)
+{
+    @return ($pixel / $padrao_navegador) * 1em;
+}
+
+p {
+    //Arredonda o valor decimal para o inteiro mais próximo
+    width: round(1000px / 3);
+    font-size: em(32);
+    color: white;
+    background-color: $roxo;
+
+    &:hover {
+        //Deixa 20% mais claro
+        //background-color: lighten($roxo, 20%);
+
+        //Deixa 20% mais escuro
+        //background-color: darken($roxo, 20%);
+
+        //Aplica transparência na cor
+        background-color: transparentize($roxo, 0.5);
+    }
+}

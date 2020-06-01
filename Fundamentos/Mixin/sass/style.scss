@@ -1,0 +1,51 @@
+//Mixin te permite criar um conjunto de comandos que podem ser incluidos dentro do estilo de seletores
+//É possível usar mixin dentro de mixin
+//É possível usar parametros
+//É possível passar valores padrões nos argumentos
+//Para usar parametros que utilizam virgulas nos valores é necessário usar argumento...
+//@content te permite substituir as propriedades na hora de incluir o mixin
+
+@mixin separador($color : #000){
+    &::after{
+        content: "";
+        width: 100px;
+        height: 4px;
+        margin: 10px auto;
+        background-color: $color;
+        display: block;
+    }
+}
+
+@mixin txt-sombra($sombra...){
+    -moz-text-shadow: $sombra;
+    -webkit-text-shadow: $sombra;
+    text-shadow: $sombra;
+}
+
+@mixin mobile{
+    @media(max-width: 600px){
+        @content;
+    }
+}
+
+@mixin titulo{
+    font: {
+        size: 2em;
+        weight: bold;
+        family: monospace;
+    }
+
+    text-align: center;
+    line-height: 1;
+    color: tomato;
+
+    @include separador(tomato);
+    @include txt-sombra(4px 4px 0px #00f, 8px 8px 0px #000);
+    @include mobile{
+        color: pink;
+    }
+}
+
+h1, h2, h3{
+    @include titulo;
+}

@@ -1,0 +1,26 @@
+h1, h2, h3 {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  line-height: 1;
+  color: tomato;
+  -moz-text-shadow: 4px 4px 0px #00f, 8px 8px 0px #000;
+  -webkit-text-shadow: 4px 4px 0px #00f, 8px 8px 0px #000;
+  text-shadow: 4px 4px 0px #00f, 8px 8px 0px #000;
+}
+
+h1::after, h2::after, h3::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  margin: 10px auto;
+  background-color: tomato;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    color: pink;
+  }
+}

@@ -1,0 +1,34 @@
+//Se declara a variável com $
+$cor-primaria: #05F;
+
+div{
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    font-family: monospace;
+}
+
+h1{
+    color: $cor-primaria;
+}
+
+//Você pode sobrescrever o valor da variável e isso não afetará o código acima
+$cor-primaria: #84E;
+
+p{
+    font-size: 1.2em;
+    line-height: 1.4;
+    max-width: 400px;
+}
+
+a{
+    max-width: 120px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $cor-primaria;
+    display: block;
+}

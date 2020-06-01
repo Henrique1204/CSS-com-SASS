@@ -1,0 +1,26 @@
+ul {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #00f;
+  font-family: sans-serif;
+  font-size: 1.8em;
+  font-weight: 900;
+  font-style: italic;
+}
+
+ul a:hover {
+  background-color: #05F;
+  transition: 0.5s;
+}

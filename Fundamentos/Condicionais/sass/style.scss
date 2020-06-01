@@ -1,0 +1,72 @@
+//A condição suporta todos os operradores de comparação
+
+$tema: oceano;
+$cor-primaria: #000;
+$cor-secundaria: #a47;
+
+@if ($tema == oceano)
+{
+    $cor-primaria: #00f;
+    $cor-secundaria: #f60;
+}
+@else if ($tema == deserto)
+{
+    $cor-primaria: #fd8;
+    $cor-secundaria: #a80;
+}
+
+@mixin tamanho-font($medida)
+{
+    font-family: monospace;
+    font-weight: bold;
+
+    @if ($medida == 16)
+    {
+        font-size: 1em;
+    }
+    @else if ($medida == 18)
+    {
+        font-size: 1.125em;
+    }
+    @else if ($medida == 24)
+    {
+        font-size: 1.5em;
+    }
+    @else
+    {
+        font-size: $medida * 1px;
+    }
+}
+
+@mixin dispositivo($modelo)
+{
+    @if ($modelo == mobile)
+    {
+        @media (max-width: 300px) {
+            @content;
+        }
+    }
+    @else if ($modelo == tablet)
+    {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+    @else if ($modelo == desktop)
+    {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+}
+
+p {
+    padding: 5px 10px;
+    @include tamanho-font(24);
+    color: $cor-primaria;
+    background-color: $cor-secundaria;
+
+    @include dispositivo(tablet) {
+        width: 400px;
+    }
+}

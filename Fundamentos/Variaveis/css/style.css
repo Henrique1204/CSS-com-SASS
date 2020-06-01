@@ -1,0 +1,28 @@
+div {
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+h1 {
+  color: #05F;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.4;
+  max-width: 400px;
+}
+
+a {
+  max-width: 120px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #84E;
+  display: block;
+}

@@ -1,0 +1,14 @@
+p {
+  padding: 5px 10px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #00f;
+  background-color: #f60;
+}
+
+@media (max-width: 600px) {
+  p {
+    width: 400px;
+  }
+}
