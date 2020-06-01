@@ -1,0 +1,76 @@
+.intro {
+    margin-top: 60px;
+
+    @include responsivo() {
+        margin-top: 20px;
+    }
+}
+
+.intro>.grid-5 {
+    align-self: flex-start;
+}
+
+.logo {
+    margin-bottom: 60px;
+}
+
+$borda-intro: 2px solid $cor-primaria;
+
+.intro-info {
+    max-width: 320px;
+    border-right: $borda-intro;
+
+    p {
+        padding-top: 10px;
+        
+        span.quebra-linha {
+            display: block;
+        }
+    }
+
+    p:first-child {
+       border-bottom: $borda-intro;
+       padding-bottom: 10px;
+    }
+}
+
+.intro-telefone {
+    color: $cor-secundaria;
+
+    &::after {
+        content: "/ / / /";
+        margin-top: 200px;
+        font-size: 220px;
+        letter-spacing: -90px;
+        color: $cor-primaria;
+        display: block;
+
+        @include responsivo(tablet) {
+            margin-top: 80px;
+            font-size: 160px;
+            letter-spacing: -70px;
+        }
+
+        @include responsivo() {
+            display: none;
+        }
+    }
+
+    @include responsivo() {
+        margin-bottom: 40px;
+    }
+}
+
+.aberto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 30px;
+    background-color: $verde;
+    display: inline-block;
+}
+
+.intro-foto {
+    width: 100%;
+    border: 10px solid $cor-suporte;
+}

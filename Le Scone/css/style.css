@@ -256,3 +256,86 @@ p {
   font-size: 1.125em;
   line-height: 1.66667em;
 }
+
+.intro {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 759px) {
+  .intro {
+    margin-top: 20px;
+  }
+}
+
+.intro > .grid-5 {
+  align-self: flex-start;
+}
+
+.logo {
+  margin-bottom: 60px;
+}
+
+.intro-info {
+  max-width: 320px;
+  border-right: 2px solid #2A2426;
+}
+
+.intro-info p {
+  padding-top: 10px;
+}
+
+.intro-info p span.quebra-linha {
+  display: block;
+}
+
+.intro-info p:first-child {
+  border-bottom: 2px solid #2A2426;
+  padding-bottom: 10px;
+}
+
+.intro-telefone {
+  color: #988C77;
+}
+
+.intro-telefone::after {
+  content: "/ / / /";
+  margin-top: 200px;
+  font-size: 220px;
+  letter-spacing: -90px;
+  color: #2A2426;
+  display: block;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .intro-telefone::after {
+    margin-top: 80px;
+    font-size: 160px;
+    letter-spacing: -70px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .intro-telefone::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .intro-telefone {
+    margin-bottom: 40px;
+  }
+}
+
+.aberto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 30px;
+  background-color: #1AB912;
+  display: inline-block;
+}
+
+.intro-foto {
+  width: 100%;
+  border: 10px solid #CBC6B9;
+}
