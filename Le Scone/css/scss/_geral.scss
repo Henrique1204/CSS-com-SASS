@@ -4,4 +4,35 @@ body {
     margin: 0;
     color: $cor-primaria;
     background-color: $cor-base;
+
+    @include responsivo() {
+        border: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.titulo {
+    @include tipo-1(18);
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        width: 70%;
+        height: 2px;
+        margin: 0 0 5px 20px;
+        background-color: currentColor;
+        display: inline-block;
+    }
+
+    @include responsivo() {
+        margin-bottom: 40px;
+    }
+}
+
+p {
+    @include tipo-1(18);
 }

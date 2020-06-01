@@ -217,3 +217,42 @@ body {
   color: #2A2426;
   background-color: #EDECE4;
 }
+
+@media screen and (max-width: 759px) {
+  body {
+    border: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.titulo {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  text-transform: uppercase;
+}
+
+.titulo::after {
+  content: '';
+  width: 70%;
+  height: 2px;
+  margin: 0 0 5px 20px;
+  background-color: currentColor;
+  display: inline-block;
+}
+
+@media screen and (max-width: 759px) {
+  .titulo {
+    margin-bottom: 40px;
+  }
+}
+
+p {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+}
