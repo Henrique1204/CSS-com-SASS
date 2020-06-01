@@ -1,0 +1,27 @@
+// Cores
+$cor-base: #EDECE4;
+$cor-suporte: #CBC6B9;
+$cor-primaria: #2A2426;
+$cor-secundaria: #988C77;
+
+// Tipografi
+$fonte-1: 'PT Mono', monospace;
+$fonte-2: 'Aref Ruqaa', serif;
+
+@function em($pixel, $contexto: 16)
+{
+    @return $pixel / $contexto + em;
+}
+
+// Mixins
+@mixin tipo-1($tamanho) {
+    font-family: $fonte-1;
+    font-size: em($tamanho);
+    line-height: em(30, $tamanho);
+}
+
+@mixin tipo-2($tamanho) {
+    font-family: $fonte-2;
+    font-size: em($tamanho);
+    line-height: em(30, $tamanho);
+}
