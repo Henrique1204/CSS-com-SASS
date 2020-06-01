@@ -209,9 +209,3 @@ table {
     margin-left: 0px;
   }
 }
-
-div {
-  min-height: 50px !important;
-  margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
