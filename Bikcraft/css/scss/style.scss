@@ -1,12 +1,16 @@
-//Preparação
+@import 'variaveis-e-mixins';
+
+// Geral
 @import '_normalize';
 @import '_reset';
 @import '_grid';
-//Páginas
+
+// Páginas
 @import '_geral';
 @import '_sobre';
 @import '_produtos';
 @import '_portfolio';
 @import '_contato';
-//Responsivo
+
+// Responsivo
 @import 'responsivo';
