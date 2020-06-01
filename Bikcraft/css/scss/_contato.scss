@@ -7,6 +7,11 @@
 
 .contato {
 	padding: 40px 0;
+
+	@include responsivo() {
+		padding-right: 0px;
+		margin-bottom: 40px;
+	}
 }
 
 .contato_form {

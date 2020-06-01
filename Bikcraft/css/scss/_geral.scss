@@ -98,16 +98,35 @@ img {
 	background: $cor-primaria; /* Amarelo */
 	padding: 15px 0;
 	z-index: 10;
+
+	@include responsivo() {
+		position: relative;
+		padding-bottom: 0px;
+	}
+}
+
+.header img {
+	@include responsivo() {
+		margin: 0 auto 10px auto;
+	}
 }
 
 .header_menu {
 	text-align: right;
+
+	@include responsivo() {
+		text-align: center;
+	}
 }
 
 .header_menu ul li {
 	display: inline-block;
 	margin-left: 25px;
 	margin-top: 20px;
+
+	@include responsivo() {
+		margin: 5px;
+	}
 }
 
 .header_menu ul li a {
@@ -118,14 +137,25 @@ img {
 	padding: 10px 0;
 	transition: all .3s ease;
 	@include tipo-1(14);
+
+	@include responsivo() {
+		border: 4px solid $preto;
+		width: 136px;
+		display: block;
+		float: left;
+	}
 }
 
 .header_menu ul li a:hover {
-	color:$branco;
+	color: $branco;
 }
 
 .header_menu ul li a.menu_ativo {
 	color:$branco;
+
+	@include responsivo() {
+		border-color: $branco;
+	}
 }
 
 /* Introdução */
@@ -138,6 +168,13 @@ img {
 	margin-top: 92px;
 	text-align: center;
 	padding-top: 80px;
+
+	@include responsivo() {
+		margin-top: 0px;
+		padding-top: 40px;
+		background: url("../img/bg-mobile.jpg") no-repeat center;
+		background-size: cover;
+	}
 }
 
 .introducao h1 {
@@ -145,6 +182,10 @@ img {
 	font-weight: bold;
 	text-transform: uppercase;
 	@include tipo-1(48);
+
+	@include responsivo() {
+		@include tipo-1(36);
+	}
 }
 
 .quote-externo {
@@ -183,6 +224,10 @@ img {
 	text-align: center;
 	color:$branco;
 	padding-top: 30px;
+
+	@include responsivo() {
+		margin-top: 0px;
+	}
 }
 
 .introducao-interna h1 {
@@ -246,6 +291,10 @@ img {
 	padding-top: 40px;
 	text-align: center;
 	clear: both;
+
+	@include responsivo() {
+		padding-top: 10px;
+	}
 }
 
 .call p{
@@ -292,6 +341,14 @@ img {
 	top: 209px;
 	right: 162px;
 	z-index: -1;
+
+	@include responsivo(tablet) {
+		right: 66px;
+	}
+
+	@include responsivo() {
+		display: none;
+	}
 }
 
 .qualidade img{
@@ -306,6 +363,10 @@ img {
 .qualidade_lista li {
 	text-align: center;
 	padding: 0 40px;
+
+	@include responsivo(tablet) {
+		padding: 0 10px;
+	}
 }
 
 .qualidade_lista li h3{
@@ -384,10 +445,23 @@ img {
 	display: block;
 	padding: 10px;
 	transition: all .5s ease;
+
+	@include responsivo(tablet) {
+		border: 3px solid $cor-primaria;
+		display: block;
+		padding: 6px;
+	}
 }
 
 .footer_redes ul li a:hover {
 	border-color: $branco;
+}
+
+.footer_redes ul li a img {
+	@include responsivo(tablet) {
+		width: 26px;
+		height: 26px;
+	}
 }
 
 .copy {
