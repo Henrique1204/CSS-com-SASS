@@ -14,7 +14,12 @@ $modelo-mobile: 480px;
 
 // Mixin de media-query
 @mixin  responsivo($modelo: false) {
-    @if ($modelo == tablet)
+    @if ($modelo == desktop) {
+        @media screen and (min-width: $modelo-desktop) {
+            @content;
+        }
+    }
+    @else if ($modelo == tablet)
     {
         @media screen and (min-width: $modelo-tablet) and (max-width: $modelo-desktop - 1) {
             @content;

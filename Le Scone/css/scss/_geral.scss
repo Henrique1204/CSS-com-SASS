@@ -18,6 +18,7 @@ img {
 .titulo {
     @include tipo-1(18);
     text-transform: uppercase;
+    align-self: flex-start;
 
     &::after {
         content: '';
