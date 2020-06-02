@@ -84,6 +84,8 @@ table {
 .row {
   margin-left: -10px;
   margin-right: -10px;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -405,4 +407,96 @@ p {
   .menu-item img {
     display: none;
   }
+}
+
+.contato {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 759px) {
+  .contato {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contato form label {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  display: block;
+}
+
+.contato form input, .contato form textarea {
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+  border: 2px solid #988C77;
+  margin-bottom: 1em;
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  color: #2A2426;
+  background-color: transparent;
+}
+
+.contato form input:hover, .contato form input:focus, .contato form textarea:hover, .contato form textarea:focus {
+  outline: none;
+  border-color: #CBC6B9;
+}
+
+.contato form textarea {
+  height: 120px;
+}
+
+.contato form .btn {
+  width: 200px;
+  padding-top: 5px;
+  border: 2px solid #988C77;
+  -webkit-box-shadow: 5px 5px 0 -2px #CBC6B9, 5px 5px 0 0 #988C77;
+  -moz-box-shadow: 5px 5px 0 -2px #CBC6B9, 5px 5px 0 0 #988C77;
+  box-shadow: 5px 5px 0 -2px #CBC6B9, 5px 5px 0 0 #988C77;
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  text-transform: uppercase;
+  color: #988C77;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato form .btn:hover {
+  -webkit-box-shadow: 3px 3px 0 -2px #CBC6B9, 3px 3px 0 0 #988C77;
+  -moz-box-shadow: 3px 3px 0 -2px #CBC6B9, 3px 3px 0 0 #988C77;
+  box-shadow: 3px 3px 0 -2px #CBC6B9, 3px 3px 0 0 #988C77;
+}
+
+.contato-info {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: #988C77;
+}
+
+@media screen and (min-width: 1200px) {
+  .contato-info {
+    margin-top: -3em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.contato-mapa {
+  -webkit-box-shadow: 0 0 0 10px #CBC6B9;
+  -moz-box-shadow: 0 0 0 10px #CBC6B9;
+  box-shadow: 0 0 0 10px #CBC6B9;
+  display: block;
+}
+
+.contato-mapa img {
+  width: 100%;
 }

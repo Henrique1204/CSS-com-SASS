@@ -26,3 +26,9 @@ $fonte-2: 'Aref Ruqaa', serif;
     font-size: em($tamanho);
     line-height: em(30, $tamanho);
 }
+
+@mixin sombra-caixa($sombra...) {
+    -webkit-box-shadow: $sombra;
+    -moz-box-shadow: $sombra;
+    box-shadow: $sombra;
+}
