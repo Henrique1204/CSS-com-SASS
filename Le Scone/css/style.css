@@ -500,3 +500,24 @@ p {
 .contato-mapa img {
   width: 100%;
 }
+
+footer {
+  padding: 20px 0 10px;
+  -webkit-box-shadow: 0 0 0 10px #2A2426;
+  -moz-box-shadow: 0 0 0 10px #2A2426;
+  box-shadow: 0 0 0 10px #2A2426;
+  background-color: #2A2426;
+}
+
+footer p {
+  color: #CBC6B9;
+}
+
+@media screen and (max-width: 759px) {
+  footer {
+    text-align: center;
+  }
+  footer a {
+    margin: 20px auto 10px;
+  }
+}

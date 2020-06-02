@@ -1,0 +1,17 @@
+footer {
+    padding: 20px 0 10px;
+    @include sombra-caixa(0 0 0 10px $cor-primaria);
+    background-color: $cor-primaria;
+
+    p {
+        color: $cor-suporte;
+    }
+
+    @include responsivo() {
+        text-align: center;
+
+        a {
+            margin: 20px auto 10px;
+        }
+    }
+}
